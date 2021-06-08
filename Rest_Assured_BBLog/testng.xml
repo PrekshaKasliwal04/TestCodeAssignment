@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BBlog API test Suite">
+	<test verbose="2" name="BBlog API test cases" enabled="true">
+		<groups>
+			<run>
+				<include name="REGRESSION" />
+			</run>
+		</groups>
+		<classes>
+		    <class name="Assignment.Rest_Assured_BBLog.RegistrationTest">
+		    <methods>
+                    <include name="verifySignUpUserTest"/>
+                    <include name="verifyAlreadyExistUserErrorTest"/>
+                </methods>	
+		    </class>
+		    <class name="Assignment.Rest_Assured_BBLog.LoginTest">
+		    <methods>
+                    <include name="verifyLoginUserTest"/>                                       
+                                       
+                </methods>	
+		    </class>
+		     <class name="Assignment.Rest_Assured_BBLog.NonAuthenticateUserTest">
+		    <methods>
+                    <include name="verifyAuthenticationRequiredErrorTest"/>
+                                       
+                </methods>	
+		    </class>
+			</classes>
+	</test>
+</suite>
+ 
