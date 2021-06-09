@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BBlog test Suite"  parallel = "false" thread-count = "2">
+<listeners>
+        <listener class-name="com.basesource.utils.RetryListener"/>
+  </listeners>
+	<test verbose="2" name="BBlog application test cases"
+		enabled="true">
+		<groups>
+			<run>
+				<include name="REGRESSION" />
+			</run>
+		</groups>
+		<classes>
+		    <class name="com.testscripts.bblog.BBlogTest" />
+		
+			</classes>
+	</test>
+</suite>
+ 
